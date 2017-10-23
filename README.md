@@ -1,10 +1,26 @@
-# mem-hugo
+# mem
 
 ```
-$ cd /path/to/mem-hugo
+$ cd /path/to/mem
 $ cd themes
 $ git clone https://github.com/milligramme/magnesium.git
 ```
+
+## new post
+
+```
+$ hugo new post/yyyy-mm-dd.md
+```
+
+## run server
+
+```
+$ cd /path/to/mem
+$ hugo server -D
+```
+
+open http://localhost:1313
+
 
 ## auto launch setting (macOS)
 
@@ -38,7 +54,7 @@ $ touch example.plist
 			<string>server</string>
 			<string>-D</string>
 			<string>--watch</string>
-			<string>--port=4444</string>
+			<string>--port=4472</string>
 		</array>
 		<key>RunAtLoad</key>
 		<true/>
@@ -52,31 +68,28 @@ $ touch example.plist
 </plist>
 ```
 
-## auto launch enable
+auto launch enable
 
 ```
 $ launchctl load ~/Library/LaunchAgents/example.plist
 ```
 
-## auto launch enable
+auto launch enable
 
 ```
 $ launchctl load ~/Library/LaunchAgents/example.plist
 ```
 
+open localhost:4472
 
-## set `dev.workingdir` in config.toml to use TexeMate URL Scheme
+
+## set `dev.workingdir` in config.toml
+
+to edit with TexeMate using URL Scheme if necessary
 
 ```toml
 [params.dev]
   # Local working dir to edit with [TextMate](https://macromates.com/)
   # This works under Development Mode.(env HUGO_ENV=DEV)
   workingdir = "/path/to/content"
-```
-
-
-## new post
-
-```
-$ hugo new post/yyyy-mm-dd.md
 ```
