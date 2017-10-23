@@ -1,0 +1,6 @@
+.DS_Store
+
+/themes/*
+!/themes/.keep
+/public
+!/public/.keep
